@@ -1,0 +1,31 @@
+/*-- scss:defaults --*/
+
+@import 'https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap';
+
+$font-family: "Atkinson Hyperlegible", sans-serif;
+
+// 強制根容器撐滿寬度並居中內容
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  // 水平居中
+  margin: 0;
+  padding: 20px;
+  width: 100%;
+}
+
+// 限制內容最大寬度並居中
+.quarto-document-content {
+  max-width: 1200px;  // 依需求調整
+  width: 100%;
+  margin: 0 auto;     // 確保內容區塊本身也居中
+  padding: 0 20px;    // 避免內容貼邊
+}
+
+// 覆蓋 Quarto 預設的側邊欄佈局（如果有）
+.sidebar, .margin-sidebar {
+  position: relative;
+  float: none;
+  width: auto;
+}
+

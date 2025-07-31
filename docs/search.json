@@ -1,0 +1,212 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "軟體需求工程",
+    "section": "",
+    "text": "摘要\n軟體需求（Software Requirements）是指在開發軟體系統時，對系統功能、性能、行為、設計約束及其他相關特性的描述。這些需求是軟體開發過程中的基礎，用於指導設計、開發、測試和維護工作。",
+    "crumbs": [
+      "摘要"
+    ]
+  },
+  {
+    "objectID": "content/introduction.html",
+    "href": "content/introduction.html",
+    "title": "1  簡介及基礎知識",
+    "section": "",
+    "text": "1.1 軟體分類\n在網際網路出現以前，尤其是大型主機（mainframe）的年代，傳統上將軟體大抵分為系統軟體（system software）及應用軟體（application software）二大類。系統軟體通常指由電腦硬體製造商所開發，用來搭配硬體運行的軟體，例如，作業系統或週邊設備的驅動程式；系統軟體通常是由電腦製造商在設備出廠時即附隨發行，後續可能視需要發行新版本。 應用軟體則是部署在系統軟體上執行，用來協助處理業務的軟體，例如，銀行的存款資訊系統、企業的財務管理資訊系統等。這類應用軟體多是由企業內部的IT部門，或是委由軟體公司，根據企業的需求開發軟體。\n隨著個人電腦及網際網路普及，另一種分類是從軟體服務的對象及其功能性質著眼，將軟體分成通用型軟體（generic software）及定製型軟體（customed software）二大類。通用型軟體是為普遍使用所設計的軟體，可以滿足許多客戶的一般要求，通常是以現成產品（commercial off-the-shielf, COTS）的方式發行，公開在市場上販售。此類產品的例子包括用於各種行動裝置的應用程式（APP）、用於 PC 的軟體（文字處理器-Word、電子試算表及繪圖軟體等），廣義來說，也包括為特定領域所設計的垂直應用系統（vertical applications），例如圖書館資訊系統、會計系統，或醫療診所的掛號及病歷管理系統等。 客製型軟體則是根據客戶預先定義的規格，委託軟體開發公司（或由組織內部的IT部門自行發展），為滿足客戶的特定需求而開發的軟體，只提供給特定的客戶或使用者操作使用。此類軟體通常是為支援特定的業務流程，例如，道路交通管制系統、空氣品質監測資料管理系統、公務機關的入口網站等。\n通用型軟體和定製型軟體的關鍵區別在於，通用性軟體的規格是由開發者所掌握及控制，這意味著，如果他們遇到開發或是後續維護上的問題，他們可以重新調整或更新其內容。對於客製性軟體，其需求及規格則由委託的客戶所製定及規範，承攬開發的軟體公司必須按照客戶所要求的規格開發軟體。詳如 圖 1.1 的說明",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>簡介及基礎知識</span>"
+    ]
+  },
+  {
+    "objectID": "content/introduction.html#軟體分類",
+    "href": "content/introduction.html#軟體分類",
+    "title": "1  簡介及基礎知識",
+    "section": "",
+    "text": "圖 1.1: 軟體的分類",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>簡介及基礎知識</span>"
+    ]
+  },
+  {
+    "objectID": "content/introduction.html#軟體需求的定義",
+    "href": "content/introduction.html#軟體需求的定義",
+    "title": "1  簡介及基礎知識",
+    "section": "1.2 軟體需求的定義",
+    "text": "1.2 軟體需求的定義\n軟體需求（Software Requirements）是指在開發軟體系統時，對系統功能、性能、行為、設計約束及其他相關特性的描述。這些需求是軟體開發過程中的基礎，用於指導設計、開發、測試和維護工作。",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>簡介及基礎知識</span>"
+    ]
+  },
+  {
+    "objectID": "content/introduction.html#ieee-對軟體需求的定義",
+    "href": "content/introduction.html#ieee-對軟體需求的定義",
+    "title": "1  簡介及基礎知識",
+    "section": "1.3 IEEE 對軟體需求的定義",
+    "text": "1.3 IEEE 對軟體需求的定義\n根據 IEEE 610.12-1990 標準，軟體需求被定義為：\n\n使用者需求（User Requirements）：\n從使用者角度描述系統應提供的功能與特性，通常以自然語言或圖表形式表達，便於非技術人員理解。\n系統需求（System Requirements）：\n詳細描述系統應實現的功能、性能、設計約束及其他特性，通常以技術性語言表達，供開發團隊使用。\n軟體需求規格（Software Requirements Specification, SRS）：\n這是一份正式文件，詳細記錄軟體系統的所有需求，包括功能需求、非功能需求及設計約束。",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>簡介及基礎知識</span>"
+    ]
+  },
+  {
+    "objectID": "content/add-content.html",
+    "href": "content/add-content.html",
+    "title": "2  Customize",
+    "section": "",
+    "text": "2.1 Edit and add your pages\nEdit the qmd or md files in the content folder. qmd files can include code (R, Python, Julia) and lots of Quarto markdown bells and whistles (like call-outs, cross-references, auto-citations and much more).\nEach page should start with\nand the first header will be the 2nd level, so ##. Note, there are situations where you leave off\nand start the qmd file with a level header #, but if using the default title yaml (in the --- fence) is a good habit since it makes it easy for Quarto convert your qmd file to other formats (like into a presentation).",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Customize</span>"
+    ]
+  },
+  {
+    "objectID": "content/add-content.html#edit-and-add-your-pages",
+    "href": "content/add-content.html#edit-and-add-your-pages",
+    "title": "2  Customize",
+    "section": "",
+    "text": "---\ntitle: your title\n---\n\n---\ntitle: your title\n---",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Customize</span>"
+    ]
+  },
+  {
+    "objectID": "content/add-content.html#add-your-pages-the-project",
+    "href": "content/add-content.html#add-your-pages-the-project",
+    "title": "2  Customize",
+    "section": "2.2 Add your pages the project",
+    "text": "2.2 Add your pages the project\n\nAdd the files to _quarto.yml",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Customize</span>"
+    ]
+  },
+  {
+    "objectID": "content/customizing.html",
+    "href": "content/customizing.html",
+    "title": "3  Customization",
+    "section": "",
+    "text": "3.1 Quarto documentation\nQuarto allow many bells and whistles to make nice output. Read the documentation here Quarto documentation.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Customization</span>"
+    ]
+  },
+  {
+    "objectID": "content/customizing.html#examples",
+    "href": "content/customizing.html#examples",
+    "title": "3  Customization",
+    "section": "3.2 Examples",
+    "text": "3.2 Examples\nLooking at other people’s Quarto code is a great way to figure out how to do stuff. Most will have a link to a GitHub repo where you can see the raw code. Look for a link to edit page or see source code. This will usually be on the right. Or look for the GitHub icon somewhere.\n\nQuarto gallery\nnmfs-openscapes\nFaye lab manual\nquarto-titlepages Note the link to edit is broken. Go to repo and look in documentation directory.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Customization</span>"
+    ]
+  },
+  {
+    "objectID": "content/rendering.html",
+    "href": "content/rendering.html",
+    "title": "4  Rendering",
+    "section": "",
+    "text": "4.1 Step 1. Make sure you have a recent RStudio\nThe repo includes a GitHub Action that will render (build) the website automatically when you make changes to the files. It will be pushed to the gh-pages branch.\nBut when you are developing your content, you will want to render it locally.\nHave you updated RStudio since about August 2022? No? Then update to a newer version of RStudio. In general, you want to keep RStudio updated and it is required to have a recent version to use Quarto.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Rendering</span>"
+    ]
+  },
+  {
+    "objectID": "content/rendering.html#step-2.-clone-and-create-rstudio-project",
+    "href": "content/rendering.html#step-2.-clone-and-create-rstudio-project",
+    "title": "4  Rendering",
+    "section": "4.2 Step 2. Clone and create RStudio project",
+    "text": "4.2 Step 2. Clone and create RStudio project\nFirst, clone the repo onto your local computer. How? You can click File &gt; New Project and then select “Version Control”. Paste in the url of the repository. That will clone the repo on to your local computer. When you make changes, you will need to push those up.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Rendering</span>"
+    ]
+  },
+  {
+    "objectID": "content/rendering.html#step-3.-render-within-rstudio",
+    "href": "content/rendering.html#step-3.-render-within-rstudio",
+    "title": "4  Rendering",
+    "section": "4.3 Step 3. Render within RStudio",
+    "text": "4.3 Step 3. Render within RStudio\nRStudio will recognize that this is a Quarto project by the presence of the _quarto.yml file and will see the “Build” tab. Click the “Render website” button to render to the _site folder.\nPreviewing: You can either click index.html in the _site folder and specify “preview in browser” or set up RStudio to preview to the viewer panel. To do the latter, go to Tools &gt; Global Options &gt; R Markdown. Then select “Show output preview in: Viewer panel”.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Rendering</span>"
+    ]
+  },
+  {
+    "objectID": "content/figures_and_tables.html",
+    "href": "content/figures_and_tables.html",
+    "title": "5  Figures and Tables",
+    "section": "",
+    "text": "5.1 Code\nMarkdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.\nYou can embed an R code chunk like this:\nsummary(cars)\n\n     speed           dist       \n Min.   : 4.0   Min.   :  2.00  \n 1st Qu.:12.0   1st Qu.: 26.00  \n Median :15.0   Median : 36.00  \n Mean   :15.4   Mean   : 42.98  \n 3rd Qu.:19.0   3rd Qu.: 56.00  \n Max.   :25.0   Max.   :120.00",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Figures and Tables</span>"
+    ]
+  },
+  {
+    "objectID": "content/figures_and_tables.html#including-plots",
+    "href": "content/figures_and_tables.html#including-plots",
+    "title": "5  Figures and Tables",
+    "section": "5.2 Including Plots",
+    "text": "5.2 Including Plots\nYou can also embed plots and reference them, like so 圖 5.1.\n\n\n\n\n\n\n\n\n圖 5.1: Plot of pressure\n\n\n\n\n\nNote that the echo = FALSE parameter was added to the code chunk to prevent printing of the R code that generated the plot.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Figures and Tables</span>"
+    ]
+  },
+  {
+    "objectID": "content/figures_and_tables.html#including-tables",
+    "href": "content/figures_and_tables.html#including-tables",
+    "title": "5  Figures and Tables",
+    "section": "5.3 Including Tables",
+    "text": "5.3 Including Tables\nYou can also embed tables and reference them with 表 5.1.\n\nlibrary(knitr)\nkable(head(iris))\n\n\n\n表 5.1: Iris Data\n\n\n\n\n\n\nSepal.Length\nSepal.Width\nPetal.Length\nPetal.Width\nSpecies\n\n\n\n\n5.1\n3.5\n1.4\n0.2\nsetosa\n\n\n4.9\n3.0\n1.4\n0.2\nsetosa\n\n\n4.7\n3.2\n1.3\n0.2\nsetosa\n\n\n4.6\n3.1\n1.5\n0.2\nsetosa\n\n\n5.0\n3.6\n1.4\n0.2\nsetosa\n\n\n5.4\n3.9\n1.7\n0.4\nsetosa",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Figures and Tables</span>"
+    ]
+  },
+  {
+    "objectID": "content/code.html",
+    "href": "content/code.html",
+    "title": "6  Rendering with Code",
+    "section": "",
+    "text": "6.1 Modify the GitHub Action\nYou can have code (R, Python or Julia) in your qmd file. You will need to have these installed on your local computer, but presumably you do already if you are adding code to your qmd files.\nYou will need to change the GitHub Action in .github/workflows to install these and any needed packages in order for GitHub to be able to render your webpage. The GitHub Action install R since I used that in code.qmd. If you use Python or Julia instead, then you will need to update the GitHub Action to install those.\nIf getting the GitHub Action to work is too much hassle (and that definitely happens), you can alway render locally and publish to the gh-pages branch. If you do this, make sure to delete or rename the GitHub Action to something like\nso GitHub does not keep trying to run it. Nothing bad will happen if you don’t do this, but if you are not using the action (because it keeps failing), then you don’t need GitHub to run it.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Rendering with Code</span>"
+    ]
+  },
+  {
+    "objectID": "content/code.html#modify-the-github-action",
+    "href": "content/code.html#modify-the-github-action",
+    "title": "6  Rendering with Code",
+    "section": "",
+    "text": "render-and-publish.old_yml",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Rendering with Code</span>"
+    ]
+  },
+  {
+    "objectID": "content/code.html#render-locally-and-publish-to-gh-pages-branch",
+    "href": "content/code.html#render-locally-and-publish-to-gh-pages-branch",
+    "title": "6  Rendering with Code",
+    "section": "6.2 Render locally and publish to gh-pages branch",
+    "text": "6.2 Render locally and publish to gh-pages branch\nTo render locally and push up to the gh-pages branch, open a terminal window and then cd to the directory with the Quarto project. Type this in the terminal:\nquarto render gh-pages",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Rendering with Code</span>"
+    ]
+  },
+  {
+    "objectID": "content/adding-refs.html",
+    "href": "content/adding-refs.html",
+    "title": "7  References",
+    "section": "",
+    "text": "Quarto has powerful references functionality. You can easily insert citations from Zotero libraries that you maintain in the cloud (on Zotero). This allows the whole team to update the library and you can sync up to that library. Read about this on the Quarto documentation on citations. Google youtube videos on this also to see it in action.\nAdd a .bib file in to your project or add a linked Zotero library via RStudio in Visual mode with Tools &gt; Project Options… &gt; R Markdown &gt; select custom libraries from the Zotero dropdown.\nThe you can type @ and you will see a dropdown of the references in your libraries. You can then select the ones to add. If you don’t see the one you need, you can paste in the DOI and it will be added to your references file (with all the info). The references will be added to your references section of your book automatically.\nSee the references.qmd file for how to include the references.\n\n@ansley1981 will produce Ansley and Davis (1981)\n[@ansley1981] will produce (Ansley and Davis 1981).\n\n\n\n\n\nAnsley, H. L. H., and C. D. Davis. 1981. “Migration and Standing Stock of Fishes Associated with Artificial and Natural Reefs on Georgia’s Outer Continental Shelf.” Brunswick, Georgia, USA.",
+    "crumbs": [
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>References</span>"
+    ]
+  },
+  {
+    "objectID": "content/references.html",
+    "href": "content/references.html",
+    "title": "References",
+    "section": "",
+    "text": "Ansley, H. L. H., and C. D. Davis. 1981. “Migration and Standing\nStock of Fishes Associated with Artificial and Natural Reefs on\nGeorgia’s Outer Continental Shelf.” Brunswick,\nGeorgia, USA.",
+    "crumbs": [
+      "References"
+    ]
+  }
+]

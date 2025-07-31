@@ -1,0 +1,69 @@
+project: 
+  type: book
+  output-dir: docs
+book: 
+  page-navigation: true
+  title: "軟體需求工程" 
+  #site-url: "https://nmfs-opensci.github.io/NOAA-quarto-book" 
+  #repo-url: "https://github.com/nmfs-opensci/NOAA-quarto-book"
+  #repo-actions: [edit, source, issue]
+  #favicon: assets/favicon.ico
+  #downloads: [pdf, docx]
+  search: true
+  chapters:
+    - index.qmd
+    - content/introduction.qmd
+    - content/add-content.qmd
+    - content/customizing.qmd
+    - content/rendering.qmd
+    - content/figures_and_tables.qmd
+    - content/code.qmd
+    - content/adding-refs.qmd
+    - content/references.qmd
+
+  #page-footer: 
+    #center: Copyright © 2025 Yuchi Chu #發生折行
+  
+  sidebar:
+    background: "#D9E3E4"
+    #logo: "https://raw.githubusercontent.com/nmfs-opensci/assets/main/logo/nmfs-opensci-logo3.png"
+    #favicon: images/favicon.ico
+    pinned: true
+    align: center
+    #tools: 
+      #- icon: globe
+       # href: https://nmfs-opensci.github.io
+       # text: "NMFS Open Science"
+    style: "docked"
+    search: true
+    collapse-level: 1
+
+bibliography: [content/references.bib]
+
+crossref:
+  chapters: true
+  fig-title: 圖    # (default is "Figure")
+  tbl-title: 表     # (default is "Table")
+  # title-delim: "."  # (default is " "), not for pdf
+  fig-prefix: 圖  # (default is "Figure")
+  tbl-prefix: 表    # (default is "Table")
+
+execute:
+  echo: false
+  code-overflow: wrap
+
+format:
+  html:
+    theme: [cosmo, assets/theme.scss] 
+    toc: true
+    toc-depth: 3
+
+
+filters:
+  - assets/include-files.lua
+  - quarto
+
+# Comment next 2 lines if the PDF is having trouble
+metadata-files:
+  - _frontmatter.yml
+ 
