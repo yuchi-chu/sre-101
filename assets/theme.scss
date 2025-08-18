@@ -1,8 +1,16 @@
 /*-- scss:defaults --*/
 
-@import 'https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap';
+// @import 'https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap';
+// $font-family: "Atkinson Hyperlegible", sans-serif;
 
-$font-family: "Atkinson Hyperlegible", sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+/* 英文字體、中文字體-- 注意與 mainfont 是否衝突，mainfont 優先 */
+$font-family-sans-serif: "Roboto Flex", "Noto Sans TC", sans-serif;
+
+
+
 
 // 強制根容器撐滿寬度並居中內容
 body {

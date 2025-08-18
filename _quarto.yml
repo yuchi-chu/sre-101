@@ -57,6 +57,8 @@ format:
     theme: [cosmo, assets/theme.scss] 
     toc: true
     toc-depth: 3
+    fontsize: 18pt #equal to font-size in CSS
+    linestretch: 1.4 #equal to line-hieght
 
 
 filters:

@@ -39,7 +39,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-29e2c20b02301cfff04dc8050bf30c7e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-77c925c657e3e474a26cfa8f42e312f9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-0da5f1aaf3f3a136edbc4e19c580ccc8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -68,6 +68,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -169,9 +198,14 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#軟體分類" id="toc-軟體分類" class="nav-link active" data-scroll-target="#軟體分類"><span class="header-section-number">1.1</span> 軟體分類</a></li>
-  <li><a href="#軟體需求的定義" id="toc-軟體需求的定義" class="nav-link" data-scroll-target="#軟體需求的定義"><span class="header-section-number">1.2</span> 軟體需求的定義</a></li>
-  <li><a href="#ieee-對軟體需求的定義" id="toc-ieee-對軟體需求的定義" class="nav-link" data-scroll-target="#ieee-對軟體需求的定義"><span class="header-section-number">1.3</span> IEEE 對軟體需求的定義</a></li>
+  <li><a href="#從系統-neq-資訊系統說起" id="toc-從系統-neq-資訊系統說起" class="nav-link active" data-scroll-target="#從系統-neq-資訊系統說起"><span class="header-section-number">1.1</span> 從系統 <span class="math inline">\(\neq\)</span> 資訊系統說起</a></li>
+  <li><a href="#軟體的分類演進及挑戰" id="toc-軟體的分類演進及挑戰" class="nav-link" data-scroll-target="#軟體的分類演進及挑戰"><span class="header-section-number">1.2</span> 軟體的分類、演進及挑戰</a>
+  <ul class="collapse">
+  <li><a href="#現今軟體的多維度光譜" id="toc-現今軟體的多維度光譜" class="nav-link" data-scroll-target="#現今軟體的多維度光譜"><span class="header-section-number">1.2.1</span> 現今軟體的多維度光譜</a></li>
+  <li><a href="#影響與挑戰" id="toc-影響與挑戰" class="nav-link" data-scroll-target="#影響與挑戰"><span class="header-section-number">1.2.2</span> 影響與挑戰</a></li>
+  </ul></li>
+  <li><a href="#軟體需求" id="toc-軟體需求" class="nav-link" data-scroll-target="#軟體需求"><span class="header-section-number">1.3</span> 軟體需求</a></li>
+  <li><a href="#ieee-對軟體需求的定義" id="toc-ieee-對軟體需求的定義" class="nav-link" data-scroll-target="#ieee-對軟體需求的定義"><span class="header-section-number">1.4</span> IEEE 對軟體需求的定義</a></li>
   </ul>
 </nav>
     </div>
@@ -197,30 +231,149 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="軟體分類" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="軟體分類"><span class="header-section-number">1.1</span> 軟體分類</h2>
-<p>在網際網路出現以前，尤其是大型主機（mainframe）的年代，傳統上將軟體大抵分為系統軟體（system software）及應用軟體（application software）二大類。系統軟體通常指由電腦硬體製造商所開發，用來搭配硬體運行的軟體，例如，作業系統或週邊設備的驅動程式；系統軟體通常是由電腦製造商在設備出廠時即附隨發行，後續可能視需要發行新版本。 應用軟體則是部署在系統軟體上執行，用來協助處理業務的軟體，例如，銀行的存款資訊系統、企業的財務管理資訊系統等。這類應用軟體多是由企業內部的IT部門，或是委由軟體公司，根據企業的需求開發軟體。</p>
-<p>隨著個人電腦及網際網路普及，另一種分類是從軟體服務的對象及其功能性質著眼，將軟體分成通用型軟體（generic software）及定製型軟體（customed software）二大類。通用型軟體是為普遍使用所設計的軟體，可以滿足許多客戶的一般要求，通常是以現成產品（commercial off-the-shielf, COTS）的方式發行，公開在市場上販售。此類產品的例子包括用於各種行動裝置的應用程式（APP）、用於 PC 的軟體（文字處理器-Word、電子試算表及繪圖軟體等），廣義來說，也包括為特定領域所設計的垂直應用系統（vertical applications），例如圖書館資訊系統、會計系統，或醫療診所的掛號及病歷管理系統等。 客製型軟體則是根據客戶預先定義的規格，委託軟體開發公司（或由組織內部的IT部門自行發展），為滿足客戶的特定需求而開發的軟體，只提供給特定的客戶或使用者操作使用。此類軟體通常是為支援特定的業務流程，例如，道路交通管制系統、空氣品質監測資料管理系統、公務機關的入口網站等。</p>
-<p>通用型軟體和定製型軟體的關鍵區別在於，通用性軟體的規格是由開發者所掌握及控制，這意味著，如果他們遇到開發或是後續維護上的問題，他們可以重新調整或更新其內容。對於客製性軟體，其需求及規格則由委託的客戶所製定及規範，承攬開發的軟體公司必須按照客戶所要求的規格開發軟體。詳如 <a href="#fig-sw-category" class="quarto-xref">圖&nbsp;<span>1.1</span></a> 的說明</p>
-<div id="fig-sw-category" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<p>在今日的數位社會，從我們早晨醒來滑開的智慧型手機，到支撐全球金融市場的複雜交易系統，再到引領未來的生成式 AI，背後的核心驅動者都是同一個無形卻又無所不在的力量 -—— 電腦軟體 (Computer Software)。如果說硬體是機器的骨骼，那麼軟體就是其靈魂。它是一系列指令、資料與程式的集合，賦予冰冷的矽晶片思考、決策與執行的能力。</p>
+<p>軟體的重要性已從單純的工具，演變為現代文明的基礎設施。它不僅是企業營運的中樞，更是個人生活、社會互動乃至國家安全的基石。正因為軟體扮演著如此關鍵的角色，如何精準地定義、規劃並打造出符合需求的軟體，便成為至關重要的課題。這一切的起點，就是「軟體需求工程」。</p>
+<p>然而，要做好需求工程，我們必須先理解我們面對的「軟體」究竟是什麼。本文將從軟體分類的演進談起，比較早期大型主機時代與現今的差異，並深入探討這些差異如何根本性地改變了軟體需求工程的思維與方法。</p>
+<section id="從系統-neq-資訊系統說起" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="從系統-neq-資訊系統說起"><span class="header-section-number">1.1</span> 從系統 <span class="math inline">\(\neq\)</span> 資訊系統說起</h2>
+<p>我們經常會在言談間聽到，或媒體上看到「某企業導入或建置○○系統，用以提升作業效率」這類報導，這裡所稱的「系統」，究竟指的是什麼呢？ 從宏觀的層次（context）來看，這裡所稱的系統可以看作是：「企業或組織為處理特定問題，或達成某個業務目標所採行的解決方案」。由於資訊科技的發展，建置、部署或導入資訊系統，可能在解決方案中佔有舉足輕重的份量，甚至扮演關鍵的角色，但不代表它是解決方案中唯一的元素。通常一個完整的解決方案需要不同的元素組成，除了資訊系統外，可能還包括：人員、資料、流程，甚至法規調適等。由 <a href="#fig-solutuin" class="quarto-xref">圖&nbsp;<span>1.1</span></a> 所示，我們可以得知解決方案（系統）並不等同於資訊系統，而以下列式子來表達或許更為適切。</p>
+<p>(解決方案 = 系統) <span class="math inline">\(\neq\)</span> 資訊系統</p>
+<div id="fig-solutuin" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-sw-category-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../images/sw-category.png" class="img-fluid quarto-figure quarto-figure-left figure-img" width="300">
+<div aria-describedby="fig-solutuin-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/solution-elements.png" class="img-fluid quarto-figure quarto-figure-left figure-img" width="500">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sw-category-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-圖&nbsp;1.1: 軟體的分類
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-solutuin-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+圖&nbsp;1.1: 解決方案的組成元素
 </figcaption>
 </figure>
 </div>
+<p>再以微觀的層次來看解決方案中各元素，一般來說，資訊系統由軟體和硬體組成，而人員也可以再分為不同類型的使用者，例如管理階層，或是外部使用者等。再進一步探究，可以列出每項元素的需求。我們以用某餐廳導入「線上點餐系統」為例，說明如下：</p>
+<ul>
+<li>資訊系統需求：
+<ul>
+<li>硬體需求：需要採購多少台伺服器？需要什麼規格的網路設備？端點需要用平板，或設置 Kiosk 嗎？</li>
+<li>軟體需求：需要開發或購買哪些應用程式？需要什麼作業系統？需要資料庫嗎？（有可能直接購買或租賃現成的軟體嗎？）</li>
+</ul></li>
+<li>人員需求：需要操作人員？需要對他們進行什麼樣的訓練？</li>
+<li>資料需求：需要收集、儲存、處理哪些資料？（例如：餐廳客戶需要先行註冊嗎？需要填哪些資料？）</li>
+<li>流程需求：為了配合新系統，現有的工作流程需要如何調整？（例如：出餐的流程？結帳的流程，萬一系統當機怎麼辦？）</li>
+</ul>
+<p>類似線上點餐系統這些需求，由於規模不大，且有相當的潛在客戶，可能有現成的解決方案可以購置或租賃（包括資訊系統），但餐廳本身的人員或流程等仍需適度採行配套措施。至於一定規模以上的專案（要達成某個業務目標），其解決方案（系統）之導入或建置，其執行面可能需要用到系統工程<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>方法，例如，有論者就認為臺灣政府先前推動數位身分證換發計畫，未採行系統工程方法，將增加失敗風險<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>（行政院在2021年1月21日院會決定暫緩換發新式身分證計畫）。</p>
+<p>以資訊系統為主要手段之解決方案，無論規模大小，軟體的表現能否滿足需求，其運行之順暢與否，攸關整體解決方案之成敗，可謂是整體解決方案關鍵因素。惟近年來軟體技術發展快速，不斷推陳出新，是以如何掌握軟體需求、設計完善的軟體，對資訊系統而言至關重要。</p>
+</section>
+<section id="軟體的分類演進及挑戰" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="軟體的分類演進及挑戰"><span class="header-section-number">1.2</span> 軟體的分類、演進及挑戰</h2>
+<p>在電腦發展的早期，特別是大型主機 (Mainframe) 稱霸的時代，軟體相對單純。當時，習慣用<strong>二分法</strong>來理解軟體世界：</p>
+<ol type="1">
+<li><strong>系統軟體 (System Software):</strong> 負責管理與控制電腦硬體資源，作為應用程式與硬體之間的橋樑, 管理硬體資源、與硬體緊密耦合，提供基礎服務給其他軟體。它們是平台的基礎，通常由專業技術人員使用，一般使用者不會直接操作它來完成特定業務。<br>
+例如，作業系統 (如 IBM 的 OS/360)、編譯器 (Compilers)、公用程式 (Utilities)、驅動程式 (Drivers)等。 系統軟體強調效能與穩定性，其價值在於讓硬體可用、可控、有效率。</li>
+<li><strong>應用軟體 (Application Software):</strong><br>
+建構在系統軟體提供的基礎服務之上，旨在為使用者解決特定領域的問題或完成特定任務。 應用軟體多是由企業內部的IT部門，或是委由軟體公司，根據企業的需求開發軟體。 例如，企業的薪資系統、庫存管理系統、銀行的帳務處理程式等。<br>
+應用軟體強調系統交付、後續維護更新速度的要求，其價值在於滿足使用者的業務需求。</li>
+</ol>
+<p>在那個時代，這種分類清晰明瞭，足以涵蓋當時的軟體形態。系統與應用涇渭分明，其相應的需求對象也相對明確。</p>
+<section id="現今軟體的多維度光譜" class="level3" data-number="1.2.1">
+<h3 data-number="1.2.1" class="anchored" data-anchor-id="現今軟體的多維度光譜"><span class="header-section-number">1.2.1</span> 現今軟體的多維度光譜</h3>
+<p>隨著個人電腦、網際網路、行動裝置、雲端運算與人工智慧的崛起，軟體的樣貌發生了天翻地覆的變化。過去的二分法已不足以描述當今複雜的軟體生態系。現在，我們需要從多個維度來為軟體分類：</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">分類維度</th>
+<th style="text-align: left;">主要類別</th>
+<th style="text-align: left;">說明</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>部署模式</strong></td>
+<td style="text-align: left;">• 本地部署軟體 (On-Premise)<br>• 軟體即服務 (SaaS)<br>• 平台即服務 (PaaS)<br>• 基礎設施即服務 (IaaS)</td>
+<td style="text-align: left;">軟體不再只是安裝在本地機器，更多是以服務形式透過雲端提供。</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>應用平台</strong></td>
+<td style="text-align: left;">• 桌面應用程式 (Desktop App)<br>• 網頁應用程式 (Web App)<br>• 行動應用程式 (Mobile App)<br>• 嵌入式軟體 (Embedded Software)</td>
+<td style="text-align: left;">軟體的執行環境從單一的電腦擴展到瀏覽器、手機、手錶、汽車、物聯網(IoT)設備等。</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>系統架構</strong></td>
+<td style="text-align: left;">• 單體式架構 (Monolithic)<br>• 微服務架構 (Microservices)</td>
+<td style="text-align: left;">從一個龐大、緊密耦合的系統，演變為由多個小型、獨立部署的服務組成的鬆散耦合系統。</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>應用領域</strong></td>
+<td style="text-align: left;">• 企業資源規劃 (ERP)<br>• 客戶關係管理 (CRM)<br>• 數據分析與商業智慧 (BI)<br>• 人工智慧與機器學習系統 (AI/ML)</td>
+<td style="text-align: left;">軟體深入到各行各業的特定領域，並產生了高度專業化的類別。</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>開發與授權</strong></td>
+<td style="text-align: left;">• 商用現成軟體 (COTS)<br>• 客製化軟體 (Custom Software)<br>• 開源軟體 (Open Source)</td>
+<td style="text-align: left;">軟體的取得與開發方式也變得多元，不再只有委託開發一種模式。</td>
+</tr>
+</tbody>
+</table>
+<p>顯然，現代軟體已從一個「系統 vs.&nbsp;應用」的線性的二分法，演變成一個多維度、跨領域的複雜生態系。</p>
+<p>另一種分類是從軟體服務的對象及其功能性質著眼，並聚焦在上述的開發與授權角度，將軟體分成通用型軟體（generic software）及定製型軟體（customed software）二大類。通用型軟體是為普遍使用所設計的軟體，可以滿足許多客戶的一般要求，通常是以現成產品（commercial off-the-shielf, COTS）的方式發行，公開在市場上販售。此類產品的例子包括用於各種行動裝置的應用程式（APP）、用於 PC 的軟體（文字處理器-Word、電子試算表及繪圖軟體等），廣義來說，也包括為特定領域所設計的垂直應用系統（vertical applications），例如圖書館資訊系統、會計系統，或醫療診所的掛號及病歷管理系統等。 客製型軟體則是根據客戶預先定義的規格，委託軟體開發公司（或由組織內部的IT部門自行發展），為滿足客戶的特定需求而開發的軟體，只提供給特定的客戶或使用者操作使用。此類軟體通常是為支援特定的業務流程，例如，道路交通管制系統、空氣品質監測資料管理系統、公務機關的入口網站等。</p>
+<p>通用型軟體和定製型軟體的關鍵區別在於，通用性軟體的規格是由開發者所掌握及控制，這意味著，如果他們遇到開發或是後續維護上的問題，他們可以重新調整或更新其內容。對於客製性軟體，其需求及規格則由委託的客戶所製定及規範，承攬開發的軟體公司必須按照客戶所要求的規格開發軟體。詳如 <a href="#fig-sw-category" class="quarto-xref">圖&nbsp;<span>1.2</span></a> 的說明</p>
+<div id="fig-sw-category" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-sw-category-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/sw-category.png" class="img-fluid quarto-figure quarto-figure-left figure-img" width="500">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sw-category-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+圖&nbsp;1.2: 軟體的分類
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="影響與挑戰" class="level3" data-number="1.2.2">
+<h3 data-number="1.2.2" class="anchored" data-anchor-id="影響與挑戰"><span class="header-section-number">1.2.2</span> 影響與挑戰</h3>
+<p>軟體分類方式的演變，不僅僅是術語的更新，它深刻地反映了軟體開發本質的變化，並對軟體需求工程帶來了四大核心挑戰與思維轉變：</p>
+<ol type="1">
+<li>利害關係人 (Stakeholders) 的爆炸性增長<br> 過往在大型主機時代，應用軟體的使用者通常是企業內部特定部門的員工（如財務部、倉儲部），利害關係人相對單純，需求來源集中，容易訪談與定義。但現今的軟體則不然， 以一個SaaS行動應用為例，利害關係人可能包括：</li>
+</ol>
+<ul>
+<li>終端使用者 (需求分散且多變，容許匿名不特定的使用者)</li>
+<li>產品經理 (負責功能規劃)</li>
+<li>行銷團隊 (關心用戶增長與轉換率)</li>
+<li>維運團隊 (DevOps) (關心系統穩定性與部署效率)</li>
+<li>資安與法務團隊 (關心數據隱私與合規性，如 GDPR)</li>
+<li>第三方開發者 (若軟體提供 API) 在如此多元複雜的情況下，需求工程師不能再只靠幾場訪談就完成工作。他們必須使用用戶研究、數據分析、A/B測試、問卷調查等多種方法來捕捉廣泛且時常相互衝突的需求，並具備更強的溝通、協調與優先級排序能力。</li>
+</ul>
+<ol start="2" type="1">
+<li>非功能性需求 (Non-Functional Requirements) 的全面升級<br> 非功能性需求（如效能、可靠性）在過往對軟體而言固然重要，但通常是在一個封閉、可控的企業內部網路中進行評估。但在雲端與行動優先的時代，非功能性需求的重要性急遽攀升，甚至成為產品成敗的關鍵：</li>
+</ol>
+<ul>
+<li>擴展性 (Scalability): 能否應對雙十一的瞬間流量洪峰？</li>
+<li>可用性 (Availability): 能否達到 99.99% 的線上時間？</li>
+<li>安全性 (Security): 如何保護用戶數據不被竊取？</li>
+<li>使用者體驗 (Usability/UX): 介面是否直觀易用，能否留住使用者？</li>
+<li>互操作性 (Interoperability): 如何與其他微服務或第三方 API 順暢協作？</li>
+</ul>
+<p>需求工程必須從專案一開始就將非功能性需求視為優先考量事項，而非事後補充。必須用量化指標（如：頁面載入時間&lt;2秒，API回應時間&lt;200ms）來精準定義，並將其納入測試案例。</p>
+<ol start="3" type="1">
+<li><p>系統邊界的模糊化與依賴性<br> 過往一個應用軟體的邊界是清晰的，它就是那套安裝在主機上的程式，與外界的互動有限。 現今軟體可視作是一個「系統的系統」。例如，一個電商App，其系統邊界極度模糊：前端運行在用戶手機上，後端由數十個微服務構成，支付功能依賴Stripe或藍新，地圖功能依賴Google Maps，簡訊通知依賴Twilio。 對於現今軟體的需求不能侷限只是分析「內部」功能。API合約 (API Contract) 和服務等級協議 (SLA) 的定義變得至關重要。工程師必須深入分析對外部服務的依賴關係、風險與備援方案。系統的穩定性不再只由自己決定，而是整個生態系的穩定性。</p></li>
+<li><p>需求生命週期的持續演化<br> 傳統的軟體開發常採用瀑布模型，需求在開發前需要被完整定義並「凍結」，變更成本極高，發布週期可能長達數年。 在敏捷 (Agile) 與 DevOps 文化下，軟體是持續交付與演進的。需求被視為一個動態的待辦清單 (Backlog)，隨時根據市場反饋進行調整。發布週期可以縮短到每週、每天甚至每小時。</p></li>
+</ol>
+<p>對於軟體需求的掌握，已從一個「階段性」工作，轉變為一個「持續性」的活動。重點從撰寫一份完美、詳盡、一成不變的需求規格文件，轉變為有效地管理一個動態、優先級清晰的需求待辦清單**，並建立快速的回饋循環。</p>
 <hr>
 </section>
-<section id="軟體需求的定義" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="軟體需求的定義"><span class="header-section-number">1.2</span> 軟體需求的定義</h2>
+</section>
+<section id="軟體需求" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="軟體需求"><span class="header-section-number">1.3</span> 軟體需求</h2>
+<p>通俗來說，需求 (requirement) 可以被定義為<strong>某人想要的任何事物</strong>。人們為了解決特定的問題，建置資訊系統，而資訊系統的目的就在於滿足此需求。</p>
+<p>對於軟體需求的定義很多，但就工程</p>
+<p>資訊系統可概分為為在系統開發的背景下，需求被視為系統（尚在專案階段）建成後應具備的特性。需求表達了使用者的必要性以及對系統施加的限制，這些都必須在開發過程中加以考慮。從系統工程師的角度來看，需求也可以被定義為需要構思的東西。儘管定義繁多，但在此介紹由 <span class="math inline">\(IEEE\)</span> <span class="math inline">\(610.12-1990\)</span> 標準（軟體工程術語詞彙表）所提出的需求定義是相當重要的：</p>
 <p>軟體需求（Software Requirements）是指在開發軟體系統時，對系統功能、性能、行為、設計約束及其他相關特性的描述。這些需求是軟體開發過程中的基礎，用於指導設計、開發、測試和維護工作。</p>
 <hr>
 </section>
-<section id="ieee-對軟體需求的定義" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="ieee-對軟體需求的定義"><span class="header-section-number">1.3</span> IEEE 對軟體需求的定義</h2>
+<section id="ieee-對軟體需求的定義" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="ieee-對軟體需求的定義"><span class="header-section-number">1.4</span> IEEE 對軟體需求的定義</h2>
 <p>根據 <strong>IEEE 610.12-1990</strong> 標準，軟體需求被定義為：</p>
 <ol type="1">
 <li><p><strong>使用者需求（User Requirements）</strong>：<br>
@@ -230,9 +383,15 @@ ul.task-list li input[type="checkbox"] {
 <li><p><strong>軟體需求規格（Software Requirements Specification, SRS）</strong>：<br>
 這是一份正式文件，詳細記錄軟體系統的所有需求，包括功能需求、非功能需求及設計約束。</p></li>
 </ol>
+
+
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
 <hr>
-
-
+<ol>
+<li id="fn1"><p>系統工程（System Engineering） 是一門跨學科的工程方法，專注於設計、整合和管理複雜系統的整個生命週期（從需求分析、設計、建置、維護，一直到除役）。其核心目標是確保系統的各個組成部分（硬體、軟體、人員、流程等）能協同工作，以滿足整體需求。系統工程強調從全局角度解決問題，而非僅優化單一組成元件。<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>自由時報，2020/03/23 自由共和國》廖宏祥／數位身分證的系統風險 <a href="https://talk.ltn.com.tw/article/paper/1360698" class="uri">https://talk.ltn.com.tw/article/paper/1360698</a><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
 </section>
 
 </main> <!-- /main -->
