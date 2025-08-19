@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>1&nbsp; 簡介及基礎知識 – 軟體需求工程</title>
+<title>1&nbsp; 理清基礎概念 – 軟體需求工程</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,7 +29,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../content/add-content.html" rel="next">
+<link href="../content/sw-requirements.html" rel="next">
 <link href="../index.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -109,7 +109,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/introduction.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">簡介及基礎知識</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/introduction.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">理清基礎概念</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -143,43 +143,49 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/introduction.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">簡介及基礎知識</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">理清基礎概念</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/sw-requirements.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">軟體需求</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/add-content.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Customize</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Customize</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/customizing.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Customization</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Customization</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/rendering.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Rendering</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Rendering</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/figures_and_tables.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Figures and Tables</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Figures and Tables</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/code.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Rendering with Code</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Rendering with Code</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/adding-refs.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">References</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">References</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -204,8 +210,13 @@ window.Quarto = {
   <li><a href="#現今軟體的多維度光譜" id="toc-現今軟體的多維度光譜" class="nav-link" data-scroll-target="#現今軟體的多維度光譜"><span class="header-section-number">1.2.1</span> 現今軟體的多維度光譜</a></li>
   <li><a href="#影響與挑戰" id="toc-影響與挑戰" class="nav-link" data-scroll-target="#影響與挑戰"><span class="header-section-number">1.2.2</span> 影響與挑戰</a></li>
   </ul></li>
-  <li><a href="#軟體需求" id="toc-軟體需求" class="nav-link" data-scroll-target="#軟體需求"><span class="header-section-number">1.3</span> 軟體需求</a></li>
-  <li><a href="#ieee-對軟體需求的定義" id="toc-ieee-對軟體需求的定義" class="nav-link" data-scroll-target="#ieee-對軟體需求的定義"><span class="header-section-number">1.4</span> IEEE 對軟體需求的定義</a></li>
+  <li><a href="#軟體工程" id="toc-軟體工程" class="nav-link" data-scroll-target="#軟體工程"><span class="header-section-number">1.3</span> 軟體工程</a>
+  <ul class="collapse">
+  <li><a href="#定義與內涵" id="toc-定義與內涵" class="nav-link" data-scroll-target="#定義與內涵"><span class="header-section-number">1.3.1</span> 定義與內涵</a></li>
+  <li><a href="#歷程與挑戰" id="toc-歷程與挑戰" class="nav-link" data-scroll-target="#歷程與挑戰"><span class="header-section-number">1.3.2</span> 歷程與挑戰</a></li>
+  </ul></li>
+  <li><a href="#掌握軟體需求的重要性" id="toc-掌握軟體需求的重要性" class="nav-link" data-scroll-target="#掌握軟體需求的重要性"><span class="header-section-number">1.4</span> 掌握軟體需求的重要性</a></li>
+  <li><a href="#tldr" id="toc-tldr" class="nav-link" data-scroll-target="#tldr">tl;dr</a></li>
   </ul>
 </nav>
     </div>
@@ -214,7 +225,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">簡介及基礎知識</span></h1>
+<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">理清基礎概念</span></h1>
 </div>
 
 
@@ -361,27 +372,57 @@ window.Quarto = {
 <li><p>需求生命週期的持續演化<br> 傳統的軟體開發常採用瀑布模型，需求在開發前需要被完整定義並「凍結」，變更成本極高，發布週期可能長達數年。 在敏捷 (Agile) 與 DevOps 文化下，軟體是持續交付與演進的。需求被視為一個動態的待辦清單 (Backlog)，隨時根據市場反饋進行調整。發布週期可以縮短到每週、每天甚至每小時。</p></li>
 </ol>
 <p>對於軟體需求的掌握，已從一個「階段性」工作，轉變為一個「持續性」的活動。重點從撰寫一份完美、詳盡、一成不變的需求規格文件，轉變為有效地管理一個動態、優先級清晰的需求待辦清單**，並建立快速的回饋循環。</p>
-<hr>
 </section>
 </section>
-<section id="軟體需求" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="軟體需求"><span class="header-section-number">1.3</span> 軟體需求</h2>
-<p>通俗來說，需求 (requirement) 可以被定義為<strong>某人想要的任何事物</strong>。人們為了解決特定的問題，建置資訊系統，而資訊系統的目的就在於滿足此需求。</p>
-<p>對於軟體需求的定義很多，但就工程</p>
-<p>資訊系統可概分為為在系統開發的背景下，需求被視為系統（尚在專案階段）建成後應具備的特性。需求表達了使用者的必要性以及對系統施加的限制，這些都必須在開發過程中加以考慮。從系統工程師的角度來看，需求也可以被定義為需要構思的東西。儘管定義繁多，但在此介紹由 <span class="math inline">\(IEEE\)</span> <span class="math inline">\(610.12-1990\)</span> 標準（軟體工程術語詞彙表）所提出的需求定義是相當重要的：</p>
-<p>軟體需求（Software Requirements）是指在開發軟體系統時，對系統功能、性能、行為、設計約束及其他相關特性的描述。這些需求是軟體開發過程中的基礎，用於指導設計、開發、測試和維護工作。</p>
-<hr>
+<section id="軟體工程" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="軟體工程"><span class="header-section-number">1.3</span> 軟體工程</h2>
+<p>1960 年代末期，隨著電腦硬體性能的快速成長，軟體的規模與複雜度也急遽增加。然而，軟體開發仍停留在個人式的「藝術創作」階段，導致專案時程落後、預算超支、軟體品質低劣、軟體難以維護與修改等問題。為了應對此危機，1968 年的 NATO 會議上首次提出了軟體工程 (Software Engineering) 一詞，倡議將工程學的原則，應用在軟體開發，以解決當時的困境。</p>
+<section id="定義與內涵" class="level3" data-number="1.3.1">
+<h3 data-number="1.3.1" class="anchored" data-anchor-id="定義與內涵"><span class="header-section-number">1.3.1</span> 定義與內涵</h3>
+<p>軟體工程 (Software Engineering) 是一門將系統化、紀律化、可量化的方法應用於軟體開發、營運和維護的學科；目的在透過專業知識、工具與技術，在有限的資源（時間、成本、人力）內，打造出滿足使用者需求、可靠、有效率且易於維護的軟體產品；而其範疇涵蓋了整個軟體生命週期的管理與實踐。一般來說，軟體工程的內涵包括：</p>
+<ul>
+<li>工程方法： 強調流程、紀律與可重複性，擺脫過去「手工藝」式的軟體開發模式，引進如需求分析、設計、測試、專案管理等系統化流程。</li>
+<li>品質保證： 追求軟體的可靠、好用、效率、可維護與可移植等多面向的特性。專案開始前進行估算，並在開發過程中持續追蹤與控制，確保專案在預算內如期如質完成。 <em>團隊協作： 提供方法論與工具，促進團隊成員間的有效溝通與協同作業。</em> 權衡取捨 (trade-offs)： 在有限的資源下，需要在各種相互衝突的目標之間做出明智的決擇（例如，快速交付與功能完整性、效能與開發成本）。這點很重要，但經常被忽略，軟體開發其實就像經濟學家湯瑪斯．索爾（Thomas Sowell）說的「沒有解方，只有取捨（There are no solutions. There are only trade-offs.）</li>
+</ul>
 </section>
-<section id="ieee-對軟體需求的定義" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="ieee-對軟體需求的定義"><span class="header-section-number">1.4</span> IEEE 對軟體需求的定義</h2>
-<p>根據 <strong>IEEE 610.12-1990</strong> 標準，軟體需求被定義為：</p>
+<section id="歷程與挑戰" class="level3" data-number="1.3.2">
+<h3 data-number="1.3.2" class="anchored" data-anchor-id="歷程與挑戰"><span class="header-section-number">1.3.2</span> 歷程與挑戰</h3>
+<p>基於人們對軟體開發本質的認識逐步深化，自1970年代迄今，軟體工程的發展可概分為以下幾個階段：</p>
 <ol type="1">
-<li><p><strong>使用者需求（User Requirements）</strong>：<br>
-從使用者角度描述系統應提供的功能與特性，通常以自然語言或圖表形式表達，便於非技術人員理解。</p></li>
-<li><p><strong>系統需求（System Requirements）</strong>：<br>
-詳細描述系統應實現的功能、性能、設計約束及其他特性，通常以技術性語言表達，供開發團隊使用。</p></li>
-<li><p><strong>軟體需求規格（Software Requirements Specification, SRS）</strong>：<br>
-這是一份正式文件，詳細記錄軟體系統的所有需求，包括功能需求、非功能需求及設計約束。</p></li>
+<li>結構化時期 (1970s - 1980s)： 以瀑布模型 (Waterfall Model) 為主流，強調線性、循序的流程，嚴謹的階段劃分（需求分析 -&gt; 設計 -&gt; 實作 -&gt; 測試 -&gt; 維護）。此模式適用於需求明確、變動性低的專案，通常透過詳盡的前期規劃來避免風險。</li>
+<li>物件導向時期 (1990s–2000s)： 物件導向程式設計 (OOP) 的興起，促使開發方法轉向以物件為中心的分析與設計 (OOAD)。統一塑模語言 (UML) 成為重要的溝通與設計工具。</li>
+<li>敏捷時期 (2000s - )： 為了應對快速變化的市場需求，敏捷開發 (Agile Development) 應運而生。其核心理念是擁抱變化，透過迭代式 (Iterative) 與漸進式 (Incremental) 的開發方式，縮短開發週期；頻繁交付可用的軟體，並強調與客戶緊密合作，通常以短週期的迭代來及早發現並應對風險。</li>
+</ol>
+<p>由於軟體技術不斷推陳出新，現今軟體的樣態極為多元，對軟體工程的應用，也帶來了前所未有的挑戰：</p>
+<ul>
+<li>複雜度的巨幅提升： 分散式系統、微服務架構、巨量資料處理等，使得系統的設計與維護變得極為複雜。</li>
+<li>對上市時間 (Time-to-Market) 的極致要求： 市場競爭激烈，產品需要快速迭代與交付，以搶佔先機。</li>
+<li>資訊安全與隱私的嚴峻考驗： 軟體承載了大量的敏感資料，任何資安漏洞都可能造成重大損失。</li>
+<li>跨領域整合的困難： 軟體不再是單一領域的產物，常需與硬體、AI 模型、不同領域的專家進行深度整合。 維護與演化的永續性： 在快速變化的技術環境中，如何確保軟體系統能夠長期、穩定地運行並持續演進，是一大難題。</li>
+</ul>
+</section>
+</section>
+<section id="掌握軟體需求的重要性" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="掌握軟體需求的重要性"><span class="header-section-number">1.4</span> 掌握軟體需求的重要性</h2>
+<p>不論何種軟體類型，如何掌握需求都是軟體工程的最前端工作，也是決定專案成敗的最關鍵階段。其重要性體現在以下幾個方面：</p>
+<ul>
+<li>奠定專案的基石： 需求定義了「要做什麼」，是後續所有設計、開發、測試工作的唯一依據。錯誤或模糊的需求，將導致整個專案方向的偏差，如同蓋房子沒有穩固的地基。對各階段的影響和作用如下：
+<ul>
+<li>設計： 需求直接決定了系統的架構、功能模組劃分以及技術選型。</li>
+<li>開發： 開發人員根據需求規格撰寫程式碼，實現具體功能。</li>
+<li>測試： 測試案例的設計完全基於需求，用以驗證軟體是否符合預期。</li>
+</ul></li>
+<li>避免無效的投入： 根據統計，越晚發現需求錯誤，修復的成本就越高。在需求階段釐清問題，可以避免後續開發階段的大量重工與資源浪費。</li>
+<li>確保產品的價值： 軟體的最終目的是為使用者或客戶創造價值。唯有準確掌握其真實需求與痛點，才能開發出真正有用、受歡迎的產品。</li>
+<li>建立共識與溝通的橋樑： 詳盡的需求規格是專案關係人（客戶、使用者、開發團隊、管理層）之間溝通的共同語言，有助於建立共識，減少誤解。</li>
+</ul>
+<p>晚近以組態驅動開發 (Configuration-Driven Development) 或平台式開發 (Platform-based Development) 為主軸的軟體發展模式，漸成為主流。軟體開發的核心不再是「從無到有地編寫程式碼 (Coding)」，而是「在既有框架內進行配置與擴充 (Configuring)。不論是產品型軟體或客製型軟體，許多開發廠商的作法是拿現成的「模組」、「套件」加以組合拼裝（或是以現成的ERP系統加以微調），類似「樂高組合」的方式的交付軟體，導致客戶的個別性需求受到限制（例如，客戶的作業流程與ERP，或流程引擎套件的作法不同），但開發廠商不願意，或是沒能力修改這些現成組件的程式碼，造成系統功能與客戶期望產生落差，這種趨勢正在從根本上改變了軟體需求工程的面貌與挑戰，我們將在後續另章討論此課題。</p>
+</section>
+<section id="tldr" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="tldr">tl;dr</h2>
+<ol type="1">
+<li><p>企業或組織為處理特定問題，或達成某個業務目標所採行的<strong>解決方案</strong>可以簡稱作<strong>系統</strong>，特別是以資訊系統作為解決方案的主要手段… 資訊系統可概分為硬體和軟體二部分，而軟體的表現能否滿足需求，其運行之順暢與否，攸關資訊系統，進而整體解決方案之成敗。</p></li>
+<li><p>早期軟體分作系統軟體及應用軟體二類，由於技術演進，現今軟體陳現各種不同的樣貌；倘以…可分作嵌入式軟體、產品型軟體及客製型軟體三類。軟體分類方式的演變，不僅僅是術語的更新，它深刻地反映了軟體開發本質的變化，對軟體需求帶來了挑戰與思維轉變。</p></li>
 </ol>
 
 
@@ -819,8 +860,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../content/add-content.html" class="pagination-link" aria-label="Customize">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Customize</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../content/sw-requirements.html" class="pagination-link" aria-label="軟體需求">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">軟體需求</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

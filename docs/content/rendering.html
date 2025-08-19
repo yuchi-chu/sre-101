@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>4&nbsp; Rendering – 軟體需求工程</title>
+<title>5&nbsp; Rendering – 軟體需求工程</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -80,7 +80,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/rendering.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Rendering</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/rendering.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Rendering</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -114,43 +114,49 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/introduction.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">簡介及基礎知識</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">理清基礎概念</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../content/sw-requirements.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">軟體需求</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/add-content.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Customize</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Customize</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/customizing.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Customization</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Customization</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/rendering.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Rendering</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Rendering</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/figures_and_tables.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Figures and Tables</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Figures and Tables</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/code.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Rendering with Code</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Rendering with Code</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../content/adding-refs.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">References</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">References</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -169,9 +175,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#step-1.-make-sure-you-have-a-recent-rstudio" id="toc-step-1.-make-sure-you-have-a-recent-rstudio" class="nav-link active" data-scroll-target="#step-1.-make-sure-you-have-a-recent-rstudio"><span class="header-section-number">4.1</span> Step 1. Make sure you have a recent RStudio</a></li>
-  <li><a href="#step-2.-clone-and-create-rstudio-project" id="toc-step-2.-clone-and-create-rstudio-project" class="nav-link" data-scroll-target="#step-2.-clone-and-create-rstudio-project"><span class="header-section-number">4.2</span> Step 2. Clone and create RStudio project</a></li>
-  <li><a href="#step-3.-render-within-rstudio" id="toc-step-3.-render-within-rstudio" class="nav-link" data-scroll-target="#step-3.-render-within-rstudio"><span class="header-section-number">4.3</span> Step 3. Render within RStudio</a></li>
+  <li><a href="#step-1.-make-sure-you-have-a-recent-rstudio" id="toc-step-1.-make-sure-you-have-a-recent-rstudio" class="nav-link active" data-scroll-target="#step-1.-make-sure-you-have-a-recent-rstudio"><span class="header-section-number">5.1</span> Step 1. Make sure you have a recent RStudio</a></li>
+  <li><a href="#step-2.-clone-and-create-rstudio-project" id="toc-step-2.-clone-and-create-rstudio-project" class="nav-link" data-scroll-target="#step-2.-clone-and-create-rstudio-project"><span class="header-section-number">5.2</span> Step 2. Clone and create RStudio project</a></li>
+  <li><a href="#step-3.-render-within-rstudio" id="toc-step-3.-render-within-rstudio" class="nav-link" data-scroll-target="#step-3.-render-within-rstudio"><span class="header-section-number">5.3</span> Step 3. Render within RStudio</a></li>
   </ul>
 </nav>
     </div>
@@ -180,7 +186,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Rendering</span></h1>
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Rendering</span></h1>
 </div>
 
 
@@ -199,16 +205,16 @@ ul.task-list li input[type="checkbox"] {
 
 <p>The repo includes a GitHub Action that will render (build) the website automatically when you make changes to the files. It will be pushed to the <code>gh-pages</code> branch.</p>
 <p>But when you are developing your content, you will want to render it locally.</p>
-<section id="step-1.-make-sure-you-have-a-recent-rstudio" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="step-1.-make-sure-you-have-a-recent-rstudio"><span class="header-section-number">4.1</span> Step 1. Make sure you have a recent RStudio</h2>
+<section id="step-1.-make-sure-you-have-a-recent-rstudio" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="step-1.-make-sure-you-have-a-recent-rstudio"><span class="header-section-number">5.1</span> Step 1. Make sure you have a recent RStudio</h2>
 <p>Have you updated RStudio since about August 2022? No? Then update to a newer version of RStudio. In general, you want to keep RStudio updated and it is required to have a recent version to use Quarto.</p>
 </section>
-<section id="step-2.-clone-and-create-rstudio-project" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="step-2.-clone-and-create-rstudio-project"><span class="header-section-number">4.2</span> Step 2. Clone and create RStudio project</h2>
+<section id="step-2.-clone-and-create-rstudio-project" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="step-2.-clone-and-create-rstudio-project"><span class="header-section-number">5.2</span> Step 2. Clone and create RStudio project</h2>
 <p>First, clone the repo onto your local computer. How? You can click File &gt; New Project and then select “Version Control”. Paste in the url of the repository. That will clone the repo on to your local computer. When you make changes, you will need to push those up.</p>
 </section>
-<section id="step-3.-render-within-rstudio" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="step-3.-render-within-rstudio"><span class="header-section-number">4.3</span> Step 3. Render within RStudio</h2>
+<section id="step-3.-render-within-rstudio" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="step-3.-render-within-rstudio"><span class="header-section-number">5.3</span> Step 3. Render within RStudio</h2>
 <p>RStudio will recognize that this is a Quarto project by the presence of the <code>_quarto.yml</code> file and will see the “Build” tab. Click the “Render website” button to render to the <code>_site</code> folder.</p>
 <p><strong>Previewing:</strong> You can either click <code>index.html</code> in the <code>_site</code> folder and specify “preview in browser” or set up RStudio to preview to the viewer panel. To do the latter, go to Tools &gt; Global Options &gt; R Markdown. Then select “Show output preview in: Viewer panel”.</p>
 
@@ -636,12 +642,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../content/customizing.html" class="pagination-link" aria-label="Customization">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Customization</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Customization</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../content/figures_and_tables.html" class="pagination-link" aria-label="Figures and Tables">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Figures and Tables</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Figures and Tables</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

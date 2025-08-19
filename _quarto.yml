@@ -13,6 +13,7 @@ book:
   chapters:
     - index.qmd
     - content/introduction.qmd
+    - content/sw-requirements.qmd
     - content/add-content.qmd
     - content/customizing.qmd
     - content/rendering.qmd
@@ -59,8 +60,7 @@ format:
     toc-depth: 3
     fontsize: 18pt #equal to font-size in CSS
     linestretch: 1.4 #equal to line-hieght
-
-
+    
 filters:
   - assets/include-files.lua
   - quarto
