@@ -1072,7 +1072,7 @@ body {
 
 // 限制內容最大寬度並居中
 .quarto-document-content {
-  max-width: 1200px;  // 依需求調整
+  max-width: 800px;  // 依需求調整
   width: 100%;
   margin: 0 auto;     // 確保內容區塊本身也居中
   padding: 0 20px;    // 避免內容貼邊
@@ -1085,19 +1085,85 @@ body {
   width: auto;
 }
 
-```{css}
-/* 隐藏原生脚注分隔线 */
-.footnotes::before {
-  display: none;
+/* 調整 TOC 側邊欄的寬度 */
+.quarto-sidebar-section {
+  width: 300px !important;
 }
 
-/* 为自定义脚注添加样式 */
-#custom-footnotes {
-  margin-top: 2em;
-  border-top: 1px solid #eee;
-  padding-top: 1em;
+/* 調整 TOC 標題的字體大小和上邊距 */
+#quarto-toc-title {
+  font-size: 1.1em !important;; 
+  margin-top: 0 !important;; 
+  padding-top: 0 !important;;
 }
-```
+
+//
+/* 设置内容宽度 */
+.column-body {
+  max-width: var(--body-width, 800px) !important;
+  margin: 0 auto !important;
+}
+
+/* 设置正文样式 */
+body {
+  font-size: var(--body-font-size, 16px);
+  line-height: var(--line-height, 1.6);
+  color: #333;
+}
+
+/* 设置标题样式 - 类似 R4DS */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--heading-color, #2c3e50) !important;
+  font-weight: 600 !important;
+  margin-top: 1.5em !important;
+  margin-bottom: 0.5em !important;
+}
+/* 一级标题 */
+h1 {
+  font-size: 1.7rem !important;
+  //border-bottom: 2px solid #e74c3c !important;
+  //padding-bottom: 0.3em !important;
+}
+
+/* 二级标题 */
+h2 {
+  font-size: 1.5rem !important;
+  border-bottom: 1px solid #666666 !important;
+  padding-bottom: 0.2em !important;
+}
+
+/* 三级标题 */
+h3 {
+  font-size: 1.3rem !important;
+}
+
+/* 四级标题 */
+h4 {
+  font-size: 1.3rem !important;
+}
+
+/* 主要方法：控制内容容器宽度 */
+.main-container {
+  max-width: 800px !important;
+  margin: 0 auto !important;
+}
+
+/* 或者更具体的选择器 */
+.column-body, 
+.column-page, 
+.column-page-inner, 
+.quarto-body {
+  max-width: 800px !important;
+  margin: 0 auto !important;
+}
+
+/* 确保侧边栏和主内容布局正常 */
+#quarto-document-content {
+  max-width: 800px !important;
+  margin: 0 auto !important;
+}
+
+
 
 
 // Heading font size customization
@@ -1235,7 +1301,7 @@ $btn-code-copy-color-active: #4758AB !default;
 $code-copy-selector: "pre.sourceCode:hover > " !default;
 $code-white-space: pre !default;
 $tbl-cap-location: top !default;
-$sidebar-border: true !default;
+$sidebar-border: false !default;
 $sidebar-bg: #D9E3E4 !default;
 // Default the theme name
 $theme-name: if(variable-exists(theme), $theme, "");
@@ -3343,8 +3409,7 @@ $nested-kbd-font-weight:            null !default; // Deprecated in v5.2.0, remo
 $pre-bg:                            $code-bg  !default;
 $pre-color:                         $body-emphasis-color !default;
 $pre-line-height:                   $line-height-base !default;
-$line-height-base: 1.4;
-$font-size-root: 18pt;
+$font-size-root: 17pt;
 
 
 

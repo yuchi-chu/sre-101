@@ -1,39 +1,135 @@
 /*-- scss:defaults --*/
 
-// @import 'https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap';
-// $font-family: "Atkinson Hyperlegible", sans-serif;
+/* 定義一個淺灰色變數 */
+$light-gray: #f2f2f2;
 
+
+/* 引入字體 */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
 
-/* 英文字體、中文字體-- 注意與 mainfont 是否衝突，mainfont 優先 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200..900&display=swap');
+
+
+
+/* 英文字體、中文字體 */
 $font-family-sans-serif: "Roboto Flex", "Noto Sans TC", sans-serif;
 
-
-
-
-// 強制根容器撐滿寬度並居中內容
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;  // 水平居中
-  margin: 0;
-  padding: 20px;
-  width: 100%;
-}
+/*-- 正文與標題樣式 --*/
 
 // 限制內容最大寬度並居中
-.quarto-document-content {
-  max-width: 1200px;  // 依需求調整
-  width: 100%;
-  margin: 0 auto;     // 確保內容區塊本身也居中
-  padding: 0 20px;    // 避免內容貼邊
+.quarto-document-content,
+.column-body,
+.column-page,
+.column-page-inner,
+.quarto-body,
+.main-container {
+  max-width: 800px !important;
+  margin: 0 auto !important;
+  padding: 0 20px !important;
 }
 
-// 覆蓋 Quarto 預設的側邊欄佈局（如果有）
-.sidebar, .margin-sidebar {
-  position: relative;
-  float: none;
-  width: auto;
+// 設置正文樣式
+body {
+  font-size: var(--body-font-size, 16px);
+  line-height: var(--line-height, 1.6);
+  color: #333;
 }
 
+// 設置所有標題樣式
+h1, h2, h3, h4, h5, h6 {
+  color: var(--heading-color, #2c3e50) !important;
+  font-weight: 600 !important;
+  margin-top: 1.5em !important;
+  margin-bottom: 0.5em !important;
+}
+
+/* 一級標題 */
+h1 {
+  font-size: 1.7rem !important;
+}
+
+/* 二級標題 */
+h2 {
+  font-size: 1.5rem !important;
+  border-bottom: 1px solid #666666 !important;
+  padding-bottom: 0.2em !important;
+}
+
+/* 三級標題 */
+h3 {
+  font-size: 1.3rem !important;
+}
+
+/* 四級標題 */
+h4 {
+  font-size: 1.3rem !important;
+}
+
+/*-- 側邊欄樣式 --*/
+
+/*
+  這些規則必須放在所有通用樣式之後，
+  以確保它們能夠覆蓋 h2 等通用設定
+*/
+
+/* 調整整個側邊欄的位置和高度 */
+#quarto-margin-sidebar {
+  top: 0px !important;
+  max-height: 100vh !important;
+}
+
+/* 調整「Table of Contents」標題的字體大小和間距 */
+h2#toc-title {
+  /* 使用 h2#toc-title 選擇器來提高權重 */
+  font-size: 1.0em !important; /* 使用 !important 確保覆蓋上面的 h2 規則 */
+  margin-top: 0px !important;
+  margin-bottom: 10px !important;
+  border-bottom: none !important; /* 移除 h2 的下劃線 */
+  padding-bottom: 0 !important; /* 移除 h2 的下內距 */
+}
+
+/* 調整右側 TOC 欄位的寬度 */
+#quarto-margin-sidebar {
+  width: 230px !important; /* 將寬度調整為您想要的大小 */
+  /*
+    您可能還需要調整 min-width 和 max-width，
+    以避免寬度被其他規則限制
+  */
+  min-width: 230px !important;
+  max-width: 230px !important;
+}
+
+.sidebar-title {
+  /* 更改左側欄標題字體粗細為粗體 */
+  font-weight: bold;
+  /* 更改字體顏色為藍色 */
+  color: #3498db;
+  /* 更改字型為明體 font-family: "Noto Serif TC", serif; */
+}
+
+/* 調整左側邊欄的背景色 */
+#quarto-sidebar {
+  background-color: $light-gray !important;
+}
+
+/* 提高左側欄頂部間距選擇器權重 */
+/* 這是最高權重的組合，用於強制覆蓋所有樣式 */
+#quarto-content #quarto-sidebar {
+  top: 0px !important;
+  max-height: 100vh !important;
+}
+
+/* 提高標題容器間距選擇器權重 */
+#quarto-content .sidebar-header {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+/* 調整書本標題的樣式（靠左、加粗、字體） */
+.sidebar-title a {
+  text-align: left;
+  display: block;
+  font-weight: 500;
+  text-decoration: none;
+}

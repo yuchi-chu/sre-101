@@ -1,14 +1,18 @@
-project: 
+project:
   type: book
   output-dir: docs
-book: 
+book:
   page-navigation: true
-  title: "軟體需求工程" 
+  title: "軟體需求工程 -101"
+  #lang: zh-TW
   #site-url: "https://nmfs-opensci.github.io/NOAA-quarto-book" 
   #repo-url: "https://github.com/nmfs-opensci/NOAA-quarto-book"
   #repo-actions: [edit, source, issue]
   #favicon: assets/favicon.ico
   #downloads: [pdf, docx]
+  #lang: zh-TW
+  
+    
   search: true
   chapters:
     - index.qmd
@@ -27,15 +31,8 @@ book:
   
   sidebar:
     background: "#D9E3E4"
-    #logo: "https://raw.githubusercontent.com/nmfs-opensci/assets/main/logo/nmfs-opensci-logo3.png"
-    #favicon: images/favicon.ico
     pinned: true
     align: center
-    #tools: 
-      #- icon: globe
-       # href: https://nmfs-opensci.github.io
-       # text: "NMFS Open Science"
-    style: "docked"
     search: true
     collapse-level: 1
 
@@ -58,8 +55,19 @@ format:
     theme: [cosmo, assets/theme.scss] 
     toc: true
     toc-depth: 3
-    fontsize: 18pt #equal to font-size in CSS
-    linestretch: 1.4 #equal to line-hieght
+    fontsize: 17pt #equal to font-size in CSS
+    #linestretch: 1.4 #equal to line-hieght
+    include-in-header:
+      text: |
+        <style>
+          :root {
+            --body-width: 800px;
+            --body-font-size: 16px;
+            --line-height: 1.6;
+            --heading-color: #2c3e50;
+            --link-color: #2c3e50;
+          }
+        </style>
     
 filters:
   - assets/include-files.lua
